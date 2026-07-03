@@ -38,7 +38,7 @@ export function useTrainArrivals({ line, latitude, longitude, pollIntervalMs = 3
         const data = await res.json();
         if (!cancelled) {
           console.log("Fetched arrivals:", data);
-          setRawArrivals(Array.isArray(data.trains) ? data.trains.splice(0, 4) : []);
+          setRawArrivals(Array.isArray(data.trains) ? data.trains : []);
           setError(null);
           setLastUpdated(new Date());
         }
@@ -75,7 +75,8 @@ export function useTrainArrivals({ line, latitude, longitude, pollIntervalMs = 3
     })
     // drop trains that already left more than a minute ago
     .filter((a) => a.minutesUntil >= -1)
-    .sort((a, b) => a.minutesUntil - b.minutesUntil);
+    .sort((a, b) => a.minutesUntil - b.minutesUntil)
+    .slice(0, 5); // only show the next 5 trains
     console.log("Processed arrivals:", arrivals);
 
   return { arrivals, isLoading, error, lastUpdated };
