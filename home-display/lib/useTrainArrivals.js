@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react";
  * @param {number} options.longitude
  * @param {number} [options.pollIntervalMs=30000]
  */
-export function useTrainArrivals({ line, latitude, longitude, pollIntervalMs = 30000 }) {
+export function useTrainArrivals({ line, latitude, longitude, pollIntervalMs = 10000 }) {
   const [rawArrivals, setRawArrivals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
