@@ -23,7 +23,7 @@ export default function TrainArrivals({
   latitude,
   longitude,
   stationLabel = "85 St – Forest Pkwy",
-  lineIconSrc = "https://upload.wikimedia.org/wikipedia/commons/f/f9/NYCS-bull-trans-J-Std.svg",
+  lineIconSrc = "/j.svg",
   rotateEveryMs = 6000,
 }) {
   const { arrivals, isLoading, error, lastUpdated } = useTrainArrivals({
@@ -81,7 +81,7 @@ export default function TrainArrivals({
       {/* header */}
       <div className="flex shrink-0 items-center justify-between border-b border-[#E2E5EA] bg-[#F7F8FA] px-6 py-3">
         <div className="flex items-center gap-3">
-          {/* <img src={lineIconSrc} alt={`${line} train`} className="h-8 w-8" /> */}
+          <img src={lineIconSrc} alt={`${line} train`} className="h-8 w-8" />
           <div>
             <h2 className="font-display text-sm font-bold uppercase tracking-wide text-[#1A1D23]">
               Train Arrivals
@@ -121,7 +121,7 @@ export default function TrainArrivals({
                 className="flex h-[50%] flex-1 items-center justify-between px-6"
               >
                 <div className="flex items-center gap-4">
-                  {/* <img src={lineIconSrc} alt={`${line} train`} className="h-10 w-10 shrink-0" /> */}
+                 
                   <div>
                     <p className="font-display text-xl font-semibold text-[#1A1D23]">
                       {arrival.direction}

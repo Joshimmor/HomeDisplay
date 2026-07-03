@@ -8,14 +8,15 @@ const HOME_LONGITUDE = -73.8656;
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F0F2F5] p-6">
-      <div className="mx-auto flex max-w-5xl flex-col gap-6">
-        <TrainArrivals
-          line="JZ"
-          latitude={HOME_LATITUDE}
-          longitude={HOME_LONGITUDE}
-          stationLabel="85 St – Forest Pkwy"
-          lineIconSrc="https://upload.wikimedia.org/wikipedia/commons/f/f9/NYCS-bull-trans-J-Std.svg"
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={100}
+          height={20}
+          priority
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -31,7 +32,7 @@ export default function Home() {
             <p className="text-[#9CA3AF]">Smart-meter data goes here.</p>
           </DashboardCard>
         </div>
-      </div>
     </main>
+    </div>
   );
 }
