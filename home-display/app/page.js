@@ -15,7 +15,7 @@ export default function Home() {
           latitude={HOME_LATITUDE}
           longitude={HOME_LONGITUDE}
           stationLabel="85 St – Forest Pkwy"
-          lineIconSrc="/j.svg"
+          lineIconSrc="https://upload.wikimedia.org/wikipedia/commons/f/f9/NYCS-bull-trans-J-Std.svg"
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

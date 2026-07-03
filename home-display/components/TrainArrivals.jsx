@@ -81,7 +81,7 @@ export default function TrainArrivals({
       {/* header */}
       <div className="flex shrink-0 items-center justify-between border-b border-[#E2E5EA] bg-[#F7F8FA] px-6 py-3">
         <div className="flex items-center gap-3">
-          <img src={lineIconSrc} alt={`${line} train`} className="h-8 w-8" />
+          {/* <img src={lineIconSrc} alt={`${line} train`} className="h-8 w-8" /> */}
           <div>
             <h2 className="font-display text-sm font-bold uppercase tracking-wide text-[#1A1D23]">
               Train Arrivals
